@@ -24,18 +24,18 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
 
     //asign hex color data to hex input box
     let hexPixelColor = pixelData[2] + 256 * pixelData[1] + 65536 * pixelData[0];
-    document.querySelector("#hexVal").value = "#" + hexPixelColor ;
+    document.querySelector("#hexVal").value = "#" + hexPixelColor.toString(16) ;
 
     document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor
     document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
     document.querySelector("#rgbVal").style.borderColor = rgbPixelColor
     document.querySelector("#hexVal").style.borderColor = rgbPixelColor
-    document.querySelector(".display-color-value").style.color = rgbPixelColor
+    document.querySelectorAll(".display-color-value").style.color = rgbPixelColor
     document.querySelector("#main-canvas").style.backgroundColor = rgbPixelColor
 
     //draw a curve in canvas area
     context.beginPath();
-    context.moveTo(250, 150)
+    context.moveTo(250, 200)
     context.quadraticCurveTo(288, 0, 388, 150);
     context.lineWidth = 10;
 
