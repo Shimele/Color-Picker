@@ -1,6 +1,6 @@
 # Color-Picker
 An image color picker made with HTML Canvas
-![alt text](https://github.com/Shimele/TODO-List-APP/blob/master/todo.png)
+![alt text](https://github.com/Shimele/Color-Picker/blob/master/color-picker.png)
 
 ## Live demo
 
