@@ -9,6 +9,7 @@ img.onload = function(){
 
 
 document.querySelector("#main-canvas").addEventListener("click", e =>{
+  alert("yes")
     let pageGap = $(canvas).offset();//get value of extra gap between window and image
     let canvasX = Math.floor(e.pageX - pageGap.left);//subtract gap from actual xcoordinate to get exact value position
     let canvasY = Math.floor(e.pageY - pageGap.top);
