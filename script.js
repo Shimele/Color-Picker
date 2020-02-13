@@ -30,7 +30,8 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
     document.querySelector("#rgbVal").style.borderColor = rgbPixelColor
     document.querySelector("#hexVal").style.borderColor = rgbPixelColor
-    document.querySelectorAll("div.display-color-value").style.color = rgbPixelColor
+    document.querySelector("#rgbVal").style.color = rgbPixelColor
+    document.querySelector("#hexVal").style.color = rgbPixelColor
     document.querySelector("#main-canvas").style.backgroundColor = rgbPixelColor
 
     //draw a curve in canvas area
