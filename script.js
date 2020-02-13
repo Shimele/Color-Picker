@@ -28,24 +28,10 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
 
     document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor
     document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
-    document.querySelector("#rgbVal").style.borderColor = rgbPixelColor
-    document.querySelector("#hexVal").style.borderColor = rgbPixelColor
-    document.querySelector("#rgbVal").style.color = rgbPixelColor
-    document.querySelector("#hexVal").style.color = rgbPixelColor
-    document.querySelector("#main-canvas").style.backgroundColor = rgbPixelColor
-
-    //draw a curve in canvas area
-    context.beginPath();
-    context.moveTo(250, 200)
-    context.quadraticCurveTo(288, 0, 388, 150);
-    context.lineWidth = 10;
-
-    //color
-    context.fillStyle = 'white';
-    context.fill();
-    context.lineWidth = 5;
-    context.strokeStyle = rgbPixelColor;
-    context.stroke(); 
+    document.querySelector("#rgbVal").style.borderStyle = "none"
+    document.querySelector("#hexVal").style.borderStyle = "none"
+    document.querySelectorAll("div.display-color-value").style.color = rgbPixelColor
+    document.querySelectorall("div.ball").style.backgroundColor = rgbPixelColor
 
 
 });
