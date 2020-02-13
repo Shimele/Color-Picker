@@ -18,14 +18,19 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     let pixelData = pixel.data;//return or store pixel information as an array
     let rgbPixelColor = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")" //convert data to rgb color
 
-    //asign rgb color data to rgb input box and to body
+    document.querySelector("input").style.color = "white"
+    //asign rgb color data to rgb input box
     document.querySelector("#rgbVal").value = rgbPixelColor
-    document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor 
-    document.body.style.backgroundColor = rgbPixelColor;
 
     //asign hex color data to hex input box
     let hexPixelColor = pixelData[2] + 256 * pixelData[1] + 65536 * pixelData[0];
-    document.querySelector("#hexVal").value = "#" + rgbPixelColor ;
+    document.querySelector("#hexVal").value = "#" + hexPixelColor ;
+
+    document.querySelector("#rgbVal #hexVal").style.backgroundColor = rgbPixelColor
+    document.querySelector("#rgbVal #hexVal").style.borderColor = rgbPixelColor 
+    document.body.style.backgroundColor = rgbPixelColor;
+
+    
 
 
 });
