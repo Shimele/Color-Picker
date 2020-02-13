@@ -9,7 +9,6 @@ img.onload = function(){
 
 
 document.querySelector("#main-canvas").addEventListener("click", e =>{
-  alert("yes")
     let pageGap = $(canvas).offset();//get value of extra gap between window and image
     let canvasX = Math.floor(e.pageX - pageGap.left);//subtract gap from actual xcoordinate to get exact value position
     let canvasY = Math.floor(e.pageY - pageGap.top);
@@ -29,9 +28,6 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
 
     document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor
     document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
-    
-    document.getElementByClassName("display-color-value").style.color = rgbPixelColor
-    document.getElementByClassName("ball").style.backgroundColor = rgbPixelColor
 
     document.getElementById("main-canvas").style.backgroundColor = rgbPixelColor
     
