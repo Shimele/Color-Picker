@@ -30,7 +30,7 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
     document.getElementById("main-canvas").style.backgroundColor = rgbPixelColor
 
-    document.getElementByClassName("ball").style.backgroundColor = rgbPixelColor
+    document.getElementById("first").style.backgroundColor = rgbPixelColor
 
     
 
