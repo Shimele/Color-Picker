@@ -1,6 +1,6 @@
 let canvas = document.getElementById("main-canvas")
 let context = canvas.getContext("2d");
-//draw image in canvas
+//insert image in canvas
 let img = new Image();
 img.src = 'image.png';
 img.onload = function(){
@@ -28,8 +28,10 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
 
     document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor
     document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
-
     document.getElementById("main-canvas").style.backgroundColor = rgbPixelColor
+
+    document.getElementByClassName("ball").style.backgroundColor = rgbPixelColor
+
     
 
 
