@@ -26,19 +26,21 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     let hexPixelColor = pixelData[2] + 256 * pixelData[1] + 65536 * pixelData[0];
     document.querySelector("#hexVal").value = "#" + hexPixelColor ;
 
-    document.querySelectorAll("div.display-color-value").style.color = rgbPixelColor
-    document.querySelectorAll("input.input-val").style.backgroundColor = rgbPixelColor
-    document.querySelectorAll("input.input-val").style.borderColor = rgbPixelColor
+    document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor
+    document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
+    document.querySelector("#rgbVal").style.borderColor = rgbPixelColor
+    document.querySelector("#hexVal").style.borderColor = rgbPixelColor
+    document.querySelector(".display-color-value").style.color = rgbPixelColor
     document.querySelector("#main-canvas").style.backgroundColor = rgbPixelColor
 
     //draw a curve in canvas area
     context.beginPath();
-    context.moveTo(188, 150)
-    context.quadraticCurveTo(288, 0, 388, 200);
+    context.moveTo(250, 150)
+    context.quadraticCurveTo(288, 0, 388, 150);
     context.lineWidth = 10;
 
     //color
-    context.fillStyle = "white";
+    context.fillStyle = 'white';
     context.fill();
     context.lineWidth = 5;
     context.strokeStyle = rgbPixelColor;
