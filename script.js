@@ -7,6 +7,18 @@ img.onload = function(){
   context.drawImage(img,0,0,img.width, img.height);
 };
 
+//draw an arc in canvas area
+let centerX = canvas.width / 2;
+let centerY = canvas.height / 2;
+let radius = 50;
+
+context.beginPath();
+context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+//context.fillStyle = 'green';
+//context.fill();
+context.lineWidth = 2;
+   
+
 document.querySelector("#main-canvas").addEventListener("click", e =>{
     let pageGap = $(canvas).offset();//get value of extra gap between window and image
     let canvasX = Math.floor(e.pageX - pageGap.left);//subtract gap from actual xcoordinate to get exact value position
@@ -29,9 +41,10 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
     document.querySelector("#rgbVal").style.borderColor = rgbPixelColor
     document.querySelector("#hexVal").style.borderColor = rgbPixelColor 
-    document.body.style.backgroundColor = rgbPixelColor;
+    document.canvas.style.backgroundColor = rgbPixelColor;
 
-    
+    context.strokeStyle = rgbPixelColor;
+    context.stroke(); 
 
 
 });
