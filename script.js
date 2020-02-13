@@ -16,12 +16,13 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     let pixel = context.getImageData(canvasX, canvasY, 1, 1);//returns image data of a particular rectangle with four values(Red, Green Blue and Alpha values(a measure of transparency))
     //(1,1)represent hight and width of rectangle area for 1pixel
     let pixelData = pixel.data;//return or store pixel information as an array
-    let rgbPixelColor = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ", ") //convert data to rgb color
+    let rgbPixelColor = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")" //convert data to rgb color
 
-    //asign rgb color data to rgb input box
+    //asign rgb color data to rgb input box and to body
     document.querySelector("#rgbVal").style.color = rgbPixelColor 
     document.querySelector("body").style.color = rgbPixelColor
 
+    //asign hex color data to hex input box
     let hexPixelColor = pixelData[2] + 256 * pixelData[1] + 65536 * pixelData[0];
     document.querySelector("#hexVal").style.color = "#" + rgbPixelColor ;
 
