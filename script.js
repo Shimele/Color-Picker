@@ -26,18 +26,19 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     let hexPixelColor = pixelData[2] + 256 * pixelData[1] + 65536 * pixelData[0];
     document.querySelector("#hexVal").value = "#" + hexPixelColor ;
 
-    document.querySelector("div").style.backgroundColor = rgbPixelColor
+    document.querySelector("div").style.color = rgbPixelColor
+    document.querySelector("input").style.backgroundColor = rgbPixelColor
     document.querySelector("input").style.borderColor = rgbPixelColor
     document.querySelector("#main-canvas").style.backgroundColor = rgbPixelColor
 
-    //draw an arc in canvas area
-    let centerX = canvas.width / 2;
-    let centerY = canvas.height / 2;
-    let radius = 50;
-
+    //draw a curve in canvas area
     context.beginPath();
-    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-    context.fillStyle = 'white';
+    context.moveTo(188, 150)
+    context.quadraticCurveTo(288, 0, 388, 150);
+    context.lineWidth = 10;
+
+    //color
+    context.fillStyle = "white";
     context.fill();
     context.lineWidth = 5;
     context.strokeStyle = rgbPixelColor;
