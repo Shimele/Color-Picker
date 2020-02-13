@@ -9,7 +9,6 @@ img.onload = function(){
 
 
 document.querySelector("#main-canvas").addEventListener("click", e =>{
-  document.body.style.color = "white"
     let pageGap = $(canvas).offset();//get value of extra gap between window and image
     let canvasX = Math.floor(e.pageX - pageGap.left);//subtract gap from actual xcoordinate to get exact value position
     let canvasY = Math.floor(e.pageY - pageGap.top);
@@ -27,10 +26,8 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     let hexPixelColor = pixelData[2] + 256 * pixelData[1] + 65536 * pixelData[0];
     document.querySelector("#hexVal").value = "#" + hexPixelColor ;
 
-    document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor
-    document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
-    document.querySelector("#rgbVal").style.borderColor = rgbPixelColor
-    document.querySelector("#hexVal").style.borderColor = rgbPixelColor 
+    document.querySelector("div").style.backgroundColor = rgbPixelColor
+    document.querySelector("input").style.borderColor = rgbPixelColor
     document.querySelector("#main-canvas").style.backgroundColor = rgbPixelColor
 
     //draw an arc in canvas area
@@ -40,9 +37,9 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
 
     context.beginPath();
     context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-    //context.fillStyle = 'green';
-    //context.fill();
-    context.lineWidth = 2;
+    context.fillStyle = 'white';
+    context.fill();
+    context.lineWidth = 5;
     context.strokeStyle = rgbPixelColor;
     context.stroke(); 
 
