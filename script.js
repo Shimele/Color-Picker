@@ -28,12 +28,15 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
 
     document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor;
     document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor;
-    document.getElementById("main-canvas").style.borderColor = rgbPixelColor;
+    document.getElementById("main-canvas").style.backgroundColor = rgbPixelColor;
 
     document.getElementById("first").style.backgroundColor = rgbPixelColor;
     document.getElementById("second").style.backgroundColor = rgbPixelColor;
     document.getElementById("third").style.backgroundColor = rgbPixelColor;
     document.getElementById("fourth").style.backgroundColor = rgbPixelColor;
+
+    document.getElementById("first-div").style.color = rgbPixelColor;
+    document.getElementById("second-div").style.color = rgbPixelColor;
 
 
     

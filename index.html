@@ -12,8 +12,10 @@
 
     <style>
         canvas{
-          margin-left: 300px;
+          margin-left: 310px;
           margin-top: 50px;
+          border: 1px solid brown;
+          background-color: antiquewhite;
         }
         .display-color-value{
           padding: 10px;
@@ -60,8 +62,8 @@
 
   <body>
     <canvas width="300px" height="310px" id="main-canvas"></canvas>
-    <div class="display-color-value">RGB:<input id="rgbVal" class="input-val"></div>
-    <div class="display-color-value">HEX:<input id="hexVal" class="input-val"></div>
+    <div class="display-color-value" id="first-div">RGB:<input id="rgbVal" class="input-val"></div>
+    <div class="display-color-value" id="second-div">HEX:<input id="hexVal" class="input-val"></div>
     <div class="ball" id="first"></div>
     <div class="ball" id="second"></div>
     <div class="ball" id="third"></div>
