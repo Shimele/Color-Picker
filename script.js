@@ -9,7 +9,7 @@ img.onload = function(){
 
 document.querySelector("#main-canvas").addEventListener("click", e =>{
     let pageGap = $(canvas).offset();//get value of extra gap between window and image
-    let canvasX = Math.floor(e.pageX - pageGap.left);//subtract gap from actual coordinate to get exact value position
+    let canvasX = Math.floor(e.pageX - pageGap.left);//subtract gap from actual xcoordinate to get exact value position
     let canvasY = Math.floor(e.pageY - pageGap.top);
 
       //get pixel content of area
@@ -19,12 +19,13 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     let rgbPixelColor = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")" //convert data to rgb color
 
     //asign rgb color data to rgb input box and to body
-    document.querySelector("#rgbVal").style.color = rgbPixelColor 
-    document.querySelector("body").style.color = rgbPixelColor
+    document.querySelector("#rgbVal").value = rgbPixelColor
+    document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor 
+    document.body.style.backgroundColor = rgbPixelColor;
 
     //asign hex color data to hex input box
     let hexPixelColor = pixelData[2] + 256 * pixelData[1] + 65536 * pixelData[0];
-    document.querySelector("#hexVal").style.color = "#" + rgbPixelColor ;
+    document.querySelector("#hexVal").value = "#" + rgbPixelColor ;
 
 
 });
