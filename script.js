@@ -26,14 +26,14 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     let hexPixelColor = pixelData[2] + 256 * pixelData[1] + 65536 * pixelData[0];
     document.querySelector("#hexVal").value = "#" + hexPixelColor.toString(16) ;
 
-    document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor
-    document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor
-    document.getElementById("main-canvas").style.backgroundColor = rgbPixelColor
+    document.querySelector("#rgbVal").style.backgroundColor = rgbPixelColor;
+    document.querySelector("#hexVal").style.backgroundColor = rgbPixelColor;
+    document.getElementById("main-canvas").style.borderColor = rgbPixelColor;
 
-    document.getElementById("first").style.backgroundColor = rgbPixelColor
-    document.getElementById("second").style.backgroundColor = rgbPixelColor
-    document.getElementById("third").style.backgroundColor = rgbPixelColor
-    document.getElementById("fourth").style.backgroundColor = rgbPixelColor
+    document.getElementById("first").style.backgroundColor = rgbPixelColor;
+    document.getElementById("second").style.backgroundColor = rgbPixelColor;
+    document.getElementById("third").style.backgroundColor = rgbPixelColor;
+    document.getElementById("fourth").style.backgroundColor = rgbPixelColor;
 
 
     
