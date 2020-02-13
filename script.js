@@ -31,6 +31,10 @@ document.querySelector("#main-canvas").addEventListener("click", e =>{
     document.getElementById("main-canvas").style.backgroundColor = rgbPixelColor
 
     document.getElementById("first").style.backgroundColor = rgbPixelColor
+    document.getElementById("second").style.backgroundColor = rgbPixelColor
+    document.getElementById("third").style.backgroundColor = rgbPixelColor
+    document.getElementById("fourth").style.backgroundColor = rgbPixelColor
+
 
     
 
